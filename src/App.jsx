@@ -6,6 +6,7 @@ function App() {
   return (
     <>
     hello world
+    <h1>React Actions</h1>
     </>
   )
 }
