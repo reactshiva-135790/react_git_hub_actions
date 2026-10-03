@@ -7,6 +7,7 @@ function App() {
     <>
     hello world
     <h1>React Actions</h1>
+    <h2>Sona baby</h2>
     </>
   )
 }
