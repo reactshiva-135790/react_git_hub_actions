@@ -56,3 +56,15 @@ jobs:
    
       - name: run build
         run: npm run build
+  deploy-job:
+    needs: [lint-job, test-job, build-job]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: "Install Vercel CLI"
+        run : npm install -g vercel
+
+      - name: "Deploy to Vercel"
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
